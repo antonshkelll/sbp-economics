@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Экономика быстрого платежа · калькулятор СБП</title>
+<meta name="description" content="Сколько продавец платит за приём платежа картой, через СБП и в цифровых рублях. Калькулятор и данные Банка России.">
+<link rel="stylesheet" href="assets/style.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
+</head>
+<body>
+<header class="hero">
+  <div class="wrap">
+    <span class="pill">Исследование · данные проверены на <b id="checked">—</b></span>
+    <h1>Экономика быстрого платежа</h1>
+    <p class="lead">Как СБП изменила стоимость безналичных расчётов в России в 2019–2026 гг. и какое место в ней займёт цифровой рубль.
+      Посчитайте, сколько <b>ваш</b> бизнес платит за приём денег.</p>
+    <div class="hero-stats">
+      <div><b>56 млн</b><span>операций СБП в сутки</span></div>
+      <div><b>55%</b><span>переводов граждан — через СБП</span></div>
+      <div><b>×2,6–4,4</b><span>карта дороже СБП для продавца</span></div>
+      <div><b>220 тыс.</b><span>кошельков цифрового рубля за месяц</span></div>
+    </div>
+    <nav><a href="#calc">Калькулятор</a><a href="#findings">Выводы</a><a href="#data">Данные</a><a href="#method">Методика</a></nav>
+  </div>
+</header>
+
+<main class="wrap">
+  <section id="calc" class="card">
+    <div class="sec-head"><span class="kicker">01 · Калькулятор</span><h2>Сколько стоит принять платёж</h2></div>
+    <div class="calc">
+      <form id="form" class="inputs">
+        <label>Оборот в месяц, ₽<input type="number" id="turnover" value="1000000" min="0" step="10000"></label>
+        <label>Средний чек, ₽<input type="number" id="check" value="1700" min="1" step="50"></label>
+        <label>Комиссия по картам, %<input type="number" id="cardRate" value="2.0" min="0" max="5" step="0.1"></label>
+        <label>Категория для СБП
+          <select id="sbpCat">
+            <option value="0.7">Обычная торговля — 0,7%</option>
+            <option value="0.4">Медицина, образование, самозанятые — 0,4%</option>
+            <option value="0.2">ЖКУ — 0,2%</option>
+          </select></label>
+        <label>Налоговый режим
+          <select id="tax">
+            <option value="usn">УСН — НДС на эквайринг не вычитается</option>
+            <option value="osn">ОСН — НДС принимается к вычету</option>
+          </select></label>
+        <label>Год для цифрового рубля
+          <select id="drYear"><option value="2027">2027 и далее — 0,3%</option><option value="2026">2026 — 0%</option></select></label>
+        <label class="range">Какую долю оплат перевести с карты: <b id="shiftOut">30%</b>
+          <input type="range" id="shift" min="0" max="100" value="30" step="5"></label>
+      </form>
+      <div class="outputs">
+        <div class="tiles">
+          <div class="tile card-t"><span>Карта</span><b id="cCard">—</b><small id="pCard"></small></div>
+          <div class="tile sbp-t"><span>СБП</span><b id="cSbp">—</b><small id="pSbp"></small></div>
+          <div class="tile dr-t"><span>Цифровой рубль</span><b id="cDr">—</b><small id="pDr"></small></div>
+        </div>
+        <div class="saving">
+          <div><span>Экономия в год при переходе в СБП</span><b id="sSbp">—</b></div>
+          <div><span>Экономия в год при переходе в цифровой рубль</span><b id="sDr">—</b></div>
+        </div>
+        <canvas id="chCalc" height="150"></canvas>
+        <p class="note">Стоимость = min(чек × ставка; 1 500 ₽) × (1 + НДС 22%, если он не вычитается). Комиссии СБП и цифрового рубля — без НДС (допущение).
+          Тарифы карт и СБП — из вторичных источников, у вашего банка они могут отличаться.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="findings">
+    <div class="sec-head"><span class="kicker">02 · Главное</span><h2>Пять выводов исследования</h2></div>
+    <div class="grid5">
+      <article><b>01</b><h3>СБП выиграла переводы</h3><p>55% переводов граждан против 21% у карт. Битва идёт уже за кассу.</p></article>
+      <article><b>02</b><h3>Половина переводов — себе</h3><p>Me2Me-переводы — это бесплатная «труба», по которой банки конкурируют за деньги клиентов.</p></article>
+      <article><b>03</b><h3>Карта в 2,6–4,4 раза дороже</h3><p>На чеке 1 700 ₽: 31–52 ₽ по карте с НДС против 11,90 ₽ по СБП.</p></article>
+      <article><b>04</b><h3>Регулятор сильнее технологий</h3><p>НДС на эквайринг, тарифы ЦБ и закон о платформах изменили цену платежа за один 2026 год.</p></article>
+      <article><b>05</b><h3>У цифрового рубля есть цена</h3><p>0% в 2026 и 0,3% с 2027 — в 2,3 раза дешевле СБП. Главный барьер — привычка.</p></article>
+    </div>
+  </section>
+
+  <section id="data">
+    <div class="sec-head"><span class="kicker">03 · Данные</span><h2>Дашборд: СБП в цифрах</h2></div>
+    <div class="charts">
+      <figure class="card"><figcaption>Объём операций СБП, трлн ₽ в год</figcaption><canvas id="chAnnual"></canvas><cite>Банк России</cite></figure>
+      <figure class="card"><figcaption>Операций СБП в сутки, млн</figcaption><canvas id="chDaily"></canvas><cite>Банк России</cite></figure>
+      <figure class="card"><figcaption>Чем платят за покупки, II кв. 2026, %</figcaption><canvas id="chMethods"></canvas><cite>Банк России; «Прочее» — остаток, расчёт автора</cite></figure>
+      <figure class="card"><figcaption>Торговые точки в СБП, млн</figcaption><canvas id="chMerchants"></canvas><cite>Банк России</cite></figure>
+      <figure class="card"><figcaption>Средний чек по способу оплаты, ₽</figcaption><canvas id="chCheck"></canvas><cite>Банк России, II кв. 2026</cite></figure>
+      <figure class="card"><figcaption>Операций на человека в месяц</figcaption><canvas id="chIntl"></canvas><cite>Расчёт автора: NPCI, Pix, Банк России; население округлено</cite></figure>
+      <figure class="card"><figcaption>Цифровой рубль: кошельков, тыс.</figcaption><canvas id="chDr"></canvas><cite>СМИ со ссылкой на Банк России (вторичные)</cite></figure>
+      <figure class="card"><figcaption>Оплат картами на жителя за квартал</figcaption><canvas id="chRegions"></canvas><cite>Банк России, II кв. 2026</cite></figure>
+    </div>
+  </section>
+
+  <section id="method" class="card">
+    <div class="sec-head"><span class="kicker">04 · Методика и источники</span><h2>Откуда цифры и насколько им верить</h2></div>
+    <div class="legend">
+      <span class="st primary">первичный</span> Банк России, тексты решений
+      <span class="st secondary">вторичный</span> СМИ и сервисы
+      <span class="st disputed">спорно</span> источники расходятся
+      <span class="st author">автор</span> расчёт или оценка
+    </div>
+    <ul id="sources" class="sources"></ul>
+    <p class="note">Код, данные (CSV) и исследование лежат в репозитории. Расчёты воспроизводятся командой <code>python analysis/test_payment_cost.py</code>.</p>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">Шкель Антон Алексеевич · ПрИнж25-1 · Финансовый университет при Правительстве РФ, факультет ИТ и анализа больших данных · 2026.
+    Не является финансовой рекомендацией.</div>
+</footer>
+<script src="assets/app.js"></script>
+</body>
+</html>

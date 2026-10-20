@@ -1,0 +1,376 @@
+{
+ "checked": "2026-10-20",
+ "tariffs": {
+  "card_min": 1.5,
+  "card_max": 2.5,
+  "card_default": 2.0,
+  "sbp_general": 0.7,
+  "sbp_social": 0.4,
+  "sbp_utilities": 0.2,
+  "sbp_cap_rub": 1500,
+  "dr_2026": 0.0,
+  "dr_2027": 0.3,
+  "dr_cap_rub": 1500,
+  "vat_acquiring": 22.0
+ },
+ "cbrTariff": [
+  [
+   125,
+   0.05
+  ],
+  [
+   250,
+   0.12
+  ],
+  [
+   1000,
+   0.3
+  ],
+  [
+   3000,
+   0.8
+  ],
+  [
+   6000,
+   2.0
+  ],
+  [
+   1000000,
+   3.0
+  ]
+ ],
+ "annual": [
+  {
+   "year": 2023,
+   "ops": 7.0,
+   "vol": 31.0,
+   "merchants": 1.5
+  },
+  {
+   "year": 2024,
+   "ops": 13.4,
+   "vol": 69.5,
+   "merchants": 2.2
+  },
+  {
+   "year": 2025,
+   "ops": 18.3,
+   "vol": 103.0,
+   "merchants": 3.0
+  }
+ ],
+ "daily": [
+  {
+   "period": "IV кв. 2023",
+   "value": 26
+  },
+  {
+   "period": "IV кв. 2024",
+   "value": 45
+  },
+  {
+   "period": "2025 (среднее)",
+   "value": 50
+  },
+  {
+   "period": "II кв. 2026",
+   "value": 56
+  }
+ ],
+ "methods": [
+  {
+   "name": "Карты",
+   "share": 60
+  },
+  {
+   "name": "Мобильный и онлайн-банкинг",
+   "share": 13
+  },
+  {
+   "name": "Электронные кошельки",
+   "share": 11
+  },
+  {
+   "name": "QR-коды",
+   "share": 5
+  },
+  {
+   "name": "Прочее (остаток, расчёт автора)",
+   "share": 11
+  }
+ ],
+ "transfers": [
+  {
+   "name": "СБП",
+   "share": 55
+  },
+  {
+   "name": "Карты",
+   "share": 21
+  },
+  {
+   "name": "Счета без СБП",
+   "share": 22
+  },
+  {
+   "name": "Иное",
+   "share": 2
+  }
+ ],
+ "avgCheck": [
+  {
+   "name": "Смартфон (приложения)",
+   "value": 716
+  },
+  {
+   "name": "Биометрия",
+   "value": 730
+  },
+  {
+   "name": "Карта",
+   "value": 838
+  },
+  {
+   "name": "Электронный кошелёк",
+   "value": 1178
+  },
+  {
+   "name": "QR-код",
+   "value": 1432
+  },
+  {
+   "name": "Онлайн-банкинг",
+   "value": 2438
+  }
+ ],
+ "merchants": [
+  {
+   "q": "II кв. 2025",
+   "all": 2.55,
+   "sme": 2.08
+  },
+  {
+   "q": "III кв. 2025",
+   "all": 2.75,
+   "sme": 2.15
+  },
+  {
+   "q": "IV кв. 2025",
+   "all": 2.97,
+   "sme": 2.3
+  },
+  {
+   "q": "I кв. 2026",
+   "all": 3.14,
+   "sme": 2.43
+  },
+  {
+   "q": "II кв. 2026",
+   "all": 3.34,
+   "sme": 2.55
+  }
+ ],
+ "regions": [
+  {
+   "name": "СЗФО",
+   "value": 112.5
+  },
+  {
+   "name": "СФО",
+   "value": 103.8
+  },
+  {
+   "name": "ЦФО",
+   "value": 103.3
+  },
+  {
+   "name": "УФО",
+   "value": 100.8
+  },
+  {
+   "name": "ДФО",
+   "value": 97.5
+  },
+  {
+   "name": "ПФО",
+   "value": 95.4
+  },
+  {
+   "name": "Россия",
+   "value": 92.0
+  },
+  {
+   "name": "ЮФО",
+   "value": 84.0
+  },
+  {
+   "name": "СКФО",
+   "value": 31.9
+  }
+ ],
+ "international": [
+  {
+   "system": "СБП",
+   "country": "Россия",
+   "perCapita": 11.6,
+   "period": "II кв. 2026 (5,1 млрд / 3)"
+  },
+  {
+   "system": "UPI",
+   "country": "Индия",
+   "perCapita": 16.9,
+   "period": "август 2026"
+  },
+  {
+   "system": "Pix",
+   "country": "Бразилия",
+   "perCapita": 38.1,
+   "period": "август 2026"
+  }
+ ],
+ "digitalRuble": [
+  {
+   "date": "10.09.2026",
+   "wallets": 87,
+   "ops": 50
+  },
+  {
+   "date": "12.10.2026",
+   "wallets": 220,
+   "ops": 150
+  }
+ ],
+ "drExpectation": 60,
+ "fraud": {
+  "2025_total_bn": 29.3,
+  "2025_returned_pct": 5.9,
+  "2024_returned_pct": 9.9,
+  "2025_share_pct": 0.00071,
+  "q2_2026_total_ops_k": 458.7,
+  "q2_2026_total_bn": 7.35,
+  "q2_2026_sbp_ops": 129055,
+  "q2_2026_sbp_bn": 2.74
+ },
+ "sources": [
+  {
+   "id": "cbr_nps_q2_2026",
+   "title": "Банк России. Развитие НПС, II кв. 2026",
+   "url": "https://cbr.ru/Collection/Collection/File/62351/development_nps_2026-q2.pdf",
+   "status": "primary"
+  },
+  {
+   "id": "cbr_sbp_2023",
+   "title": "Банк России. Показатели СБП в 2023 году удвоились, 02.02.2024",
+   "url": "https://www.cbr.ru/press/event/?id=18391",
+   "status": "primary"
+  },
+  {
+   "id": "cbr_sbp_2024",
+   "title": "Банк России. Итоги СБП 2024",
+   "url": "https://www.cbr.ru/press/event/?id=23333",
+   "status": "primary"
+  },
+  {
+   "id": "cbr_sbp_q4_2025",
+   "title": "Банк России. СБП: основные показатели, IV кв. 2025",
+   "url": "https://www.cbr.ru/analytics/nps/sbp/4_2025/",
+   "status": "primary"
+  },
+  {
+   "id": "cbr_sbp_tariff_2026",
+   "title": "Банк России. Решение о тарифах в СБП от 27.03.2026",
+   "url": "https://cbr.ru/rbr/dir_decisions/rsd_2026-03-27_45_01/",
+   "status": "primary"
+  },
+  {
+   "id": "cbr_dr_tariff_2026",
+   "title": "Банк России. Решение о тарифах платформы цифрового рубля от 28.08.2026 (Гарант)",
+   "url": "https://www.garant.ru/products/ipo/prime/doc/414732671/",
+   "status": "primary"
+  },
+  {
+   "id": "cbr_dr_rollout",
+   "title": "Банк России. Массовое внедрение цифрового рубля, 15.07.2025",
+   "url": "https://www.cbr.ru/press/event/?id=25772",
+   "status": "primary"
+  },
+  {
+   "id": "cbr_fraud_2025",
+   "title": "Банк России. Обзор операций без согласия клиентов, 2025",
+   "url": "https://www.cbr.ru/analytics/ib/operations_survey/2025/",
+   "status": "primary"
+  },
+  {
+   "id": "cbr_fraud_q2_2026",
+   "title": "Банк России. Обзор операций без согласия клиентов, II кв. 2026",
+   "url": "https://cbr.ru/statistics/ib/review_2q_2026/",
+   "status": "primary"
+  },
+  {
+   "id": "kommersant_2025",
+   "title": "Коммерсантъ, 06.02.2026 — итоги СБП 2025",
+   "url": "https://www.kommersant.ru/doc/8418300",
+   "status": "secondary"
+  },
+  {
+   "id": "izvestia_dr",
+   "title": "«Известия», 02.09.2026 — старт цифрового рубля",
+   "url": "https://iz.ru/2159280/2026-09-02/zapusk-tcifrovogo-rublia-v-krupneishikh-bankakh-startoval-s-pereboiami",
+   "status": "secondary"
+  },
+  {
+   "id": "dr_month",
+   "title": "РБ.ру, ТКС.ру, Коммерсантъ — первый месяц цифрового рубля (октябрь 2026)",
+   "url": "https://rb.ru/news/zapusk-cifrovogo-rublya-prevzoshyol-ozhidaniya-cb-s-1-sentyabrya-rossiyane-otkryli-bolee-220-tys-schetov/",
+   "status": "secondary"
+  },
+  {
+   "id": "kontur_sbp",
+   "title": "Контур. Что нужно знать бизнесу о СБП в 2026 году (26.05.2026)",
+   "url": "https://kontur.ru/articles/6279",
+   "status": "secondary"
+  },
+  {
+   "id": "nspk_blog",
+   "title": "НСПК. СБП или эквайринг в 2026 году",
+   "url": "https://sbp.nspk.ru/blog/sbp-ili-ekvairing-cto-vygodnee-dlia-malogo-biznesa",
+   "status": "secondary"
+  },
+  {
+   "id": "vat_425",
+   "title": "Материалы банков о законе № 425-ФЗ (НДС на эквайринг)",
+   "url": "https://pay.yandex.ru/blog/articles/ekvajring-2026",
+   "status": "secondary"
+  },
+  {
+   "id": "pix",
+   "title": "clearingpost.com — Pix, август 2026",
+   "url": "https://clearingpost.com/insights/pix-passed-8-billion-transactions-in-a-month-for-the-first-time-in-august-2026/",
+   "status": "secondary"
+  },
+  {
+   "id": "upi",
+   "title": "Business Standard, Medianama — UPI, август 2026",
+   "url": "https://www.medianama.com/2026/09/223-upi-transactions-august-2026/",
+   "status": "secondary"
+  },
+  {
+   "id": "cashback",
+   "title": "Т—Ж, Ведомости — кэшбэк банков 2024–2025",
+   "url": "https://t-j.ru/news/cashback-392mlgd-2024g/",
+   "status": "secondary"
+  },
+  {
+   "id": "biometrics",
+   "title": "Финанс Mail, ComNews — биометрические платежи 2025",
+   "url": "https://www.comnews.ru/content/243113/2026-01-12/2026-w03/1008/biometriya-zashagala-strane",
+   "status": "secondary"
+  },
+  {
+   "id": "keyrate",
+   "title": "Банк России — ключевая ставка 14% с 24.07.2026 (через Сбер CIB)",
+   "url": "https://sbercib.ru/publication/reshenie-banka-rossii-po-klyuchevoi-stavke-ot-24-iyulya-2026-goda",
+   "status": "secondary"
+  }
+ ]
+}
