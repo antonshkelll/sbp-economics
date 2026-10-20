@@ -1,0 +1,23 @@
+name: CI
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+      - run: pip install -r requirements.txt
+      - name: Расчёты совпадают с отчётом и презентацией
+        working-directory: analysis
+        run: python test_payment_cost.py
+      - name: Данные и графики собираются из dataset.py
+        working-directory: analysis
+        run: |
+          python build_data.py
+          python figures.py

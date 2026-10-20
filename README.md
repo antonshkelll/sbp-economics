@@ -4,6 +4,7 @@
 
 **Как Система быстрых платежей изменила стоимость безналичных расчётов в России в 2019–2026 гг. и какое место в ней займёт цифровой рубль**
 
+[![CI](https://github.com/antonshkelll/sbp-economics/actions/workflows/ci.yml/badge.svg)](https://github.com/antonshkelll/sbp-economics/actions/workflows/ci.yml)
 ![data](https://img.shields.io/badge/данные-на_20.10.2026-0098AE)
 ![python](https://img.shields.io/badge/Python-3.11+-016A80)
 ![tests](https://img.shields.io/badge/расчёты-покрыты_тестами-1E9E6A)
