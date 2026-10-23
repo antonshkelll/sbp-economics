@@ -10,7 +10,7 @@
 ![tests](https://img.shields.io/badge/расчёты-покрыты_тестами-1E9E6A)
 ![license](https://img.shields.io/badge/license-MIT_%2B_CC_BY_4.0-083542)
 
-[**Калькулятор и дашборд**](https://antonshkelll.github.io/sbp-economics/) · [**Исследование (PDF)**](research/Исследование%20—%20Экономика%20быстрого%20платежа.pdf) · [**Презентация**](presentation/) · [**Данные (CSV)**](data/)
+[**Калькулятор и дашборд**](https://sbp.antonshkel.ru/) · [**Исследование (PDF)**](research/Исследование%20—%20Экономика%20быстрого%20платежа.pdf) · [**Презентация**](presentation/) · [**Данные (CSV)**](data/)
 
 <img src="docs/assets/screenshot.png" width="820" alt="Калькулятор стоимости платежа">
 
